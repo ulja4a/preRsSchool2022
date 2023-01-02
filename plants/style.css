@@ -4,3 +4,67 @@ body {
 	justify-content: space-between;
     font-family: 'Inika', serif;
 }
+.container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+     }
+header {
+    position: absolute;
+    width: 1440px;
+    height: 134px;
+    left: 0px;
+    top: 0px;
+    background: #EDF2EC;
+}
+.navbar {
+    position: absolute;
+    width: 1218px;
+    height: 50px;
+    left: 111px;
+    top: 42px;
+    border: 1px solid #499A18
+}
+.nav {
+    display: flex;
+    position: absolute;
+    width: 452px;
+    height: 50px;
+    left: 879px;
+    top: 42px;
+}
+.price {
+    position: absolute;
+    height: 50px;
+    left: 82.15%;
+    right: 15.21%;
+    top: 42px;
+}
+.about {
+    position: absolute;
+    height: 50px;
+    left: 67.29%;
+    right: 28.06%;
+    top: 42px;
+}
+.contacts {
+    position: absolute;
+    height: 50px;
+    left: 87.99%;
+    right: 7.57%;
+    top: 42px;
+}
+.nav-list {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	list-style: none;
+	}
+.nav-link {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 50px;
+    color: #010201;
+}
