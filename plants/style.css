@@ -1,65 +1,77 @@
 body {
-    display: flex;
-	flex-direction: column;
-	justify-content: space-between;
     font-family: 'Inika', serif;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    max-width: 1440px;
+}
+html {
+    box-sizing: border-box;
+  }
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 .container {
-    position: relative;
-    max-width: 1440px;
+    max-width: 1220px;
     margin: 0 auto;
      }
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 1220px;
+    height: 50px;
+}
 header {
-    position: absolute;
+    padding: 42px 109px 42px 111px;
     width: 1440px;
     height: 134px;
-    left: 0px;
-    top: 0px;
     background: #EDF2EC;
 }
-.navbar {
-    position: absolute;
-    width: 1218px;
-    height: 50px;
-    left: 111px;
-    top: 42px;
-    border: 1px solid #499A18
+.logo {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-end;
+}
+a.logo {
+    margin 0;
+    padding: 0;
+}
+.logo-text {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
 }
 .nav {
-    display: flex;
-    position: absolute;
-    width: 452px;
-    height: 50px;
-    left: 879px;
-    top: 42px;
-}
-.price {
-    position: absolute;
-    height: 50px;
-    left: 82.15%;
-    right: 15.21%;
-    top: 42px;
-}
-.about {
-    position: absolute;
-    height: 50px;
-    left: 67.29%;
-    right: 28.06%;
-    top: 42px;
-}
-.contacts {
-    position: absolute;
-    height: 50px;
-    left: 87.99%;
-    right: 7.57%;
-    top: 42px;
+    
 }
 .nav-list {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	list-style: none;
-	}
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-item {
+    margin-right: 46px;
+}
+.nav-item:last-child {
+    margin-right: 0;
+}
+.price {
+    
+}
+.about {
+    
+}
+.contacts {
+    
+}
 .nav-link {
     font-family: 'Inika';
     font-style: normal;
@@ -67,4 +79,16 @@ header {
     font-size: 16px;
     line-height: 50px;
     color: #010201;
+    text-decoration: none;
+}
+.nav-link.home {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+    color: #E06733;
+}
+a.nav-link {
+
 }
