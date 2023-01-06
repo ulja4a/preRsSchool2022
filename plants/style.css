@@ -1,14 +1,18 @@
 body {
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
     font-family: 'Inika', serif;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 25px;
     font-weight: normal;
     color: #000000;
-    margin: 0;
+    
 }
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 *, *::before, *::after {
     box-sizing: inherit;
@@ -31,7 +35,7 @@ html {
     margin: 42px 0px;
 }
 header {
-    position: fixed;
+    
     width: 1440px;
     height: 134px;
     background: #EDF2EC;
@@ -72,6 +76,7 @@ header {
     line-height: 50px;
     color: #010201;
     text-decoration: none;
+    transition: .3s;
 }
 .nav-link:hover, .nav-link:focus, .nav-link:active {
     font-family: 'Inika';
