@@ -336,10 +336,6 @@ h2.service-h2 {
     border-radius: 20px;
     margin: 32px 41px;
 }
-.price-link {
-    
-
-}
 .accordion-btn {
     width: 250px;
     height: 50px;
@@ -348,7 +344,6 @@ h2.service-h2 {
 .price-img {
     margin: 32px 41px 0;
 }
-
 .leafs-price-h2 {
     font-family: 'Inter';
     font-style: normal;
