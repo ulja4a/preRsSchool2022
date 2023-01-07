@@ -7,6 +7,7 @@ body {
     font-size: 16px;
     line-height: 25px;
     font-weight: normal;
+    margin: 0;
     color: #000000;
     
 }
@@ -341,13 +342,20 @@ h2.service-h2 {
     border-radius: 20px;
     margin: 32px 41px;
 }
+.price-item-accordion {
+    margin: 34px 41px;
+}
 .accordion-btn {
     width: 250px;
     height: 50px;
     margin: 34px 41px;
 }
 .price-img {
-    margin: 32px 41px 0;
+    margin: 0 0 26px 0;
+}
+.price-img:hover {
+    background: #D6E7D2;
+    border-radius: 20px;
 }
 .leafs-price-h2 {
     font-family: 'Inter';
@@ -412,11 +420,52 @@ h2.service-h2 {
 }
 .contact-text {
     width: 195px;
-    height: 51px;
+    height: 111px;
 }
 .contact-button {
     display: flex;
+    justify-content: space-between;
+    width: 450px;
+    height: 50px;
+    margin: 148px 0 352px;
+    background: #D6E7D2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+}
+.contact-button:hover {
+    height: 50px;
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+}
+.button-text-city {
+    display: flex;
     flex-wrap: wrap;
+    margin: 5px 226px 5px 20px;
+    width: 204px;
+    height: 40px;
+}
+p.button-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+    margin: 0;
+}
+.accordion-btn-city {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 17px 35px 17px;
+}
+.ellips-btn {
+    width: 16px;
+    height: 16px;
+}
+.ellips-btn:hover {
+    transform: rotate(-180deg);
 }
 .contact-h2 {
     font-family: 'Inika';
