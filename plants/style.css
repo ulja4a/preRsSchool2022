@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Inika';
+    src: url("assets/fonts/Inika-Regular.ttf");
+    font-weight: 400;
+  }
+@font-face {
+    font-family: 'Inika';
+    src: url("assets/fonts/Inika-Bold.ttf");
+    font-weight: 700;
+  }
+@font-face {
+    font-family: 'Inter';
+    src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+    font-weight: 700;
+  }
 body {
     display: flex;
 	flex-direction: column;
@@ -10,7 +25,7 @@ body {
     width: 100%;
     height: 100%;
     color: #000000;
-    
+    margin: 0;
 }
 html {
     box-sizing: border-box;
@@ -52,7 +67,6 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 21.04px;
     color: #000000;
     margin: 0;
     padding: 0;
@@ -65,7 +79,7 @@ header {
     margin: 0;
 }
 .nav-item {
-    margin-right: 46px;
+    margin-right: 47px;
 }
 .nav-item:last-child {
     margin-right: 0;
@@ -118,8 +132,6 @@ header {
     height: 340px;
 }
 h1 {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 700;
     font-size: 45px;
     line-height: 50px;
@@ -131,13 +143,10 @@ h1 {
     color: #499A18;
 }
 .text {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
     font-size: 20px;
     line-height: 35px;
     color: #636060;
-    margin: 37px 0 0 0;
+    margin: 45px 0 0 0;
 }
 .welcome-button {
     width: 158px;
@@ -149,7 +158,7 @@ h1 {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    margin: 53px 0 0 0;
+    margin: 47px 0 0 0;
 }
 .welcome-button:hover {
     color: #fff;
@@ -170,13 +179,18 @@ h1 {
 .about-text {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    width: 549px;
-    height: 340px;
+    width: 605px;
+    height: 350px;
     margin: 0;
 }
 p.about-p {
-    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #636060;
+    margin: 40px 0 0 0;
 }
 .houseplant1 {
     display: flex;
@@ -193,11 +207,11 @@ h2.about-h2 {
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
-    color: #499A18;
-    margin: 0;
+    color: #E06733;
+    margin: 0 142px 0 0;
 }
 .about-color {
-    color: #E06733;
+    color: #499A18;
 }
 .service {
     width: 1440px;
@@ -211,7 +225,7 @@ h2.service-h2 {
     font-size: 40px;
     line-height: 52px;
     color: #499A18;
-    margin-right: 142px;
+    margin: 40px 142px 0 0;
     width: 306px;
     height: 94px;
 }
@@ -226,7 +240,7 @@ h2.service-h2 {
     font-size: 20px;
     line-height: 26px;
     color: #E06733;
-    margin: 0 38px 0 0;
+    margin: 54px 38px 0 0;
 }
 .services-button:last-child {
     margin-right: 0;
@@ -276,13 +290,13 @@ h2.service-h2 {
     border-radius: 0px 0px 20px 20px;
 }
 .service-h3 {
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     text-align: center;
     color: #E06733;
+    margin: 10px 0 0 0;
 }
 .service-p {
     font-family: 'Inter';
@@ -292,6 +306,7 @@ h2.service-h2 {
     line-height: 20px;
     text-align: center;
     color: #717171;
+    margin: 12px 0 0 0;
 }
 .service-item-second {
     display: flex;
@@ -312,14 +327,13 @@ h2.service-h2 {
     align-items: center;
     justify-content: space-between;
     height: 405px;
-    margin: 40px 0 115px;
+    margin: 16px 0 115px;
 }
 .prices-prices {
     width: 332px;
     height: 391.01px;
 }
 .prices-h2 {
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -352,14 +366,13 @@ h2.service-h2 {
     margin: 34px 41px;
 }
 .price-img {
-    margin: 0 0 26px 0;
+    margin: 0 0 23px 0;
 }
 .price-img:hover {
     background: #D6E7D2;
     border-radius: 20px;
 }
 .leafs-price-h2 {
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -494,7 +507,7 @@ footer {
     align-items: center;
     width: 1222px;
     height: 50px;
-    margin: 40px 0;
+    margin: 10px 30px 0 0;
 }
 .footer-data {
     display: flex;
@@ -508,7 +521,7 @@ footer {
     font-size: 20px;
     line-height: 50px;
     color: #000000;
-    margin-right: 20px;
+    margin: 0 20px 0 0;
 }
 .footer-link-github .footer-link-rss {
     font-family: 'Inter';
@@ -519,6 +532,25 @@ footer {
     color: #000000;
 }
 a.footer-link-github, a.footer-link-rss {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
     text-decoration: none;
     color: #000000;
+}
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.social-item {
+    margin-right: 20px;
+}
+.social-item:last-child {
+    margin-right: 0;
+}
+.social-svg {
+    text-decoration: none;
 }
