@@ -3,7 +3,7 @@
     src: url("assets/fonts/Inika-Regular.ttf");
     font-weight: 400;
   }
-  @font-face {
+@font-face {
     font-family: 'Inika';
     src: url("assets/fonts/Inika-Bold.ttf");
     font-weight: 700;
@@ -507,7 +507,7 @@ footer {
     align-items: center;
     width: 1222px;
     height: 50px;
-    margin: 40px 0;
+    margin: 10px 30px 0 0;
 }
 .footer-data {
     display: flex;
@@ -540,9 +540,17 @@ a.footer-link-github, a.footer-link-rss {
     text-decoration: none;
     color: #000000;
 }
-a.social-svg {
-    margin: 0 12px 0 0;
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
-a.social-svg:last-child {
+.social-item {
+    margin-right: 20px;
+}
+.social-item:last-child {
     margin-right: 0;
+}
+.social-svg {
+    text-decoration: none;
 }
