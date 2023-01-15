@@ -52,8 +52,6 @@ html {
     margin: 42px 0px;
 }
 header {
-    
-    width: 1440px;
     height: 134px;
     background: #EDF2EC;
 }
@@ -103,7 +101,6 @@ header {
     color: #E06733;
 }
 .welcome {
-    width: 1440px;
     height: 532px;
     padding: 0;
     background: #EDF2EC;
@@ -165,7 +162,6 @@ h1 {
     background: #E06733;
 }
 .about {
-    width: 1440px;
     height: 666px;
     background: #FFFFFF;
 }
@@ -214,7 +210,6 @@ h2.about-h2 {
     color: #499A18;
 }
 .service {
-    width: 1440px;
     height: 1300px;
     background: #EDF2EC;
 }
@@ -317,7 +312,6 @@ h2.service-h2 {
     margin: 27.5px 0;
 }
 .prices {
-    width: 1440px;
     height: 560px;
     background: #FFFFFF
 }
@@ -413,7 +407,6 @@ h2.service-h2 {
     height: 175px;
 }
 .contacts {
-    width: 1440px;
     height: 550px;
     background: #EDF2EC;
 }
@@ -496,7 +489,6 @@ p.button-text {
     margin: 146px 0 352px 0;
 }
 footer {
-    width: 1440px;
     height: 130px;
     background: #FFFFFF;
 }
