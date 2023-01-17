@@ -546,3 +546,8 @@ a.footer-link-github, a.footer-link-rss {
 .social-svg {
     text-decoration: none;
 }
+@media (max-width: 768px) 
+.container {
+    max-width: 668px;
+    margin: 0 auto;
+}
