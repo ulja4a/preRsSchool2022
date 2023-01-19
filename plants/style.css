@@ -43,6 +43,7 @@ html {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    width: 1222px;
     height: 50px;
 }
 .navbar {
@@ -496,7 +497,6 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 1222px;
     height: 50px;
     margin: 10px 30px 0 0;
 }
@@ -550,4 +550,251 @@ a.footer-link-github, a.footer-link-rss {
     max-width: 668px;
     margin: 0 auto;
     }
+header {
+    height: 117px;
+    background: #EDF2EC;
+    }
+.leafs-img {
+    background-image: url("/ulja4a-JSFEPRESCHOOL2022Q4/plants/assets/img/leafs.png");
+    width: 280px;
+    height: 254px;
+    margin: 0 0 55px 42px
+    }
+h1 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+    }
+h2 {
+    margin: 0;
+}
+.welcome-text {
+    width: 346px;
+    height: 310px;
+    order: 1;
+}
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 30px 0 0;
+}
+.welcome {
+    height: 420px;
+}
+.leafs {
+    order: 2;
+}
+.welcome_section {
+    padding: 40px 0 70px 0;
+}
+.welcome-button {
+    margin: 30px 0 0 0;
+}
+h2.about-h2 {
+    text-align: center;
+    margin: 0 72px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 46px;
+}
+.about {
+    height: 768px;
+}
+.about-text {
+    justify-content: center;
+    width: 100%;
+}
+.about_section {
+    padding: 40px 0 95px 0;
+    display: grid;
+    justify-content: center;
+}
+p.about-p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 20px 0 0 0;
+}
+.houseplant1 {
+    display: grid;
+    justify-content: center;
+}
+.about-img {
+    width: 250px;
+    height: 258px;
+    margin: 40px;
+}
+.service-container {
+    display: grid;
+
+}
+h2.service-h2 {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 46px;
+    margin: 60px 142px 0 0;
+}
+.services-btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0 0 0;
+}
+.services-button {
+    width: 161px;
+    height: 50px;
+    margin: 0 38px 0 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+.services {
+    margin: 40px 0 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.service-item  {
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+}
+.service-item-second {
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+}
+.service-img {
+    width: 280px;
+    height: 350px;
+}
+.rectangle {
+    width: 280px;
+    height: 100px;
+}
+.service-h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+.service-p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    width: 201px;
+    height: 40px;
+    margin: auto;
+}
+.service {
+    height: 1780px;
+}
+.prices {
+    height: 585px;
+}
+.price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 456px;
+    margin: 40px 0 88px 0;
+}
+.leafs-price-h2 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: right;
+}
+.leafs-prices {
+    margin: 100px 0 0 0;
+}
+.leafs-prices-img {
+    margin: 0;
+}
+.text-button {
+    width: 296px;
+}
+.prices-prices {
+    width: 332px;
+    height: 421px;
+}
+.prices-h2 {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+}
+.contacts {
+    height: 739px;
+}
+.contacts-section {
+    display: grid;
+    justify-content: center;
+}
+.contact-text {
+    order: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.contact-h2 {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    margin: 40px 0 0;
+}
+.contact-button {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    height: 50px;
+    margin: 100px 100px;
+}
+.contact-woman {
+    order: 3;
+}
+.contact-woman-img {
+    width: 200px;
+    height: 248px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 150px auto;
+}
+footer {
+    height: 181px;
+}
+.footer-content {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    margin: 23px 0 18px 0;
+}
+.footer-data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+a.footer-link-rss {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+}
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+ul.social-list {
+    padding: 25px 0 27px 0;
+}
+
 }
