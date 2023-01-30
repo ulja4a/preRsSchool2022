@@ -17,3 +17,9 @@
         }
     }
 }());
+
+//services plus blur
+(function () {
+    const servicesButtonFirst = document.querySelector(".services-button");
+
+}());
