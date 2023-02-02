@@ -282,6 +282,7 @@ h2.service-h2 {
 }
 .service-item-second_blur {
     filter: blur(2.5px);
+    transition: 0.4s;
 }
 .service-img {
     width: 330px;

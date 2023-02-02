@@ -21,28 +21,55 @@
 //services plus blur
 (function () {
     const servicesButtonFirst = document.querySelector('.services-button.garden');
+    const servicesButtonSecond = document.querySelector('.services-button.lawng');
+    const servicesButtonThird = document.querySelector('.services-button.planting');
     const blurItemPlants = document.querySelectorAll(".plants");
     const blurItemSecondPlants = document.querySelectorAll("service-item-second.plants");
-    //const blurItemPlants = document.querySelector("services-button.plants");
+    const blurItemGarden = document.querySelectorAll(".gardens");
+    const blurItemSecondGarden = document.querySelectorAll("service-item-second.gardens");
     const blurItemLawn = document.querySelectorAll(".lawn");
 
-    if (servicesButtonFirst.classList.contains('services-button_activ')) {
-        servicesButtonFirst.classList.remove('services-button_activ');
-    } else {
+    
      servicesButtonFirst.addEventListener("click", (event) => {
-        servicesButtonFirst.classList.add("services-button_activ");
+        servicesButtonFirst.classList.toggle("services-button_activ");
         blurItemPlants.forEach((el) => {
-            el.classList.add("service-item_blur");
+            el.classList.toggle("service-item_blur");
         })
         blurItemSecondPlants.forEach((el) => {
-            el.classList.add("service-item-second_blur");
+            el.classList.toggle("service-item-second_blur");
         })
         blurItemLawn.forEach((el) => {
-            el.classList.add("service-item_blur")
+            el.classList.toggle("service-item_blur")
         })
-
-        console.log(event)
     })
-}
+
+    servicesButtonSecond.addEventListener("click", (event) => {
+        servicesButtonSecond.classList.toggle("services-button_activ");
+        blurItemPlants.forEach((el) => {
+            el.classList.toggle("service-item_blur");
+        })
+        blurItemSecondPlants.forEach((el) => {
+            el.classList.toggle("service-item-second_blur");
+        })
+        blurItemGarden.forEach((el) => {
+            el.classList.toggle("service-item_blur")
+        })
+        blurItemSecondGarden.forEach((el) => {
+            el.classList.toggle("service-item-second_blur");
+        })
+    })
+
+    servicesButtonThird.addEventListener("click", (event) => {
+        servicesButtonThird.classList.toggle("services-button_activ");
+        blurItemGarden.forEach((el) => {
+            el.classList.toggle("service-item_blur");
+        })
+        blurItemSecondGarden.forEach((el) => {
+            el.classList.toggle("service-item-second_blur");
+        })
+        blurItemLawn.forEach((el) => {
+            el.classList.toggle("service-item_blur")
+        })
+    })
 
 }());
