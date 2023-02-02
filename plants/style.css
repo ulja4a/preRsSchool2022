@@ -244,6 +244,11 @@ h2.service-h2 {
     color: #fff;
     background: #E06733;
 }
+
+.services-button_activ {
+    color: #fff;
+    background: #E06733;
+}
 .service-container {
     display: flex;
     flex-wrap: wrap;
@@ -271,6 +276,12 @@ h2.service-h2 {
     width: 330px;
     height: 450px;
     margin: 27.5px 0;
+}
+.service-item_blur {
+    filter: blur(2.5px);
+}
+.service-item-second_blur {
+    filter: blur(2.5px);
 }
 .service-img {
     width: 330px;
@@ -1217,4 +1228,3 @@ header {
         transition: 0.4s;
     }
     }
-    

@@ -20,6 +20,29 @@
 
 //services plus blur
 (function () {
-    const servicesButtonFirst = document.querySelector(".services-button");
+    const servicesButtonFirst = document.querySelector('.services-button.garden');
+    const blurItemPlants = document.querySelectorAll(".plants");
+    const blurItemSecondPlants = document.querySelectorAll("service-item-second.plants");
+    //const blurItemPlants = document.querySelector("services-button.plants");
+    const blurItemLawn = document.querySelectorAll(".lawn");
+
+    if (servicesButtonFirst.classList.contains('services-button_activ')) {
+        servicesButtonFirst.classList.remove('services-button_activ');
+    } else {
+     servicesButtonFirst.addEventListener("click", (event) => {
+        servicesButtonFirst.classList.add("services-button_activ");
+        blurItemPlants.forEach((el) => {
+            el.classList.add("service-item_blur");
+        })
+        blurItemSecondPlants.forEach((el) => {
+            el.classList.add("service-item-second_blur");
+        })
+        blurItemLawn.forEach((el) => {
+            el.classList.add("service-item_blur")
+        })
+
+        console.log(event)
+    })
+}
 
 }());
