@@ -624,30 +624,21 @@ h2.service-h2 {
     width: 195px;
     height: 111px;
 }
-.contact-button {
-    display: flex;
-    justify-content: space-between;
+.contact_item {
     width: 450px;
     height: 50px;
-    margin: 148px 0 352px;
+    margin: 148px 0 352px;   
+}
+.button_city_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
     background: #D6E7D2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px;
-}
-.contact-button:hover {
-    height: 50px;
-    background: #C1E698;
-    border: 1px solid #D6E7D2;
-    border-radius: 0px;
-}
-.button-text-city {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px 226px 5px 20px;
-    width: 204px;
-    height: 40px;
-}
-p.button-text {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -655,12 +646,274 @@ p.button-text {
     line-height: 40px;
     letter-spacing: 0.05em;
     color: #717171;
-    margin: 0;
+    cursor: pointer;
 }
-.accordion-btn-city {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 17px 35px 17px;
+.button_city_header::after {
+    content: "";
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    background-image: url(./assets/img/accordion_btn.png);
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+}
+/*.contact_item:not(.contact_item_show) .button_city_header {
+    height: 50px;
+    background: #D6E7D2;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+  }*/
+.contact_item:not(.contact_item_show) .accordion-body-city {
+    display: none;
+}
+.contact_item_show .button_city_header::after {
+    transform: rotate(-180deg);
+  }
+.contact_item_show .button_city_header {
+    height: 50px;
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+    box-shadow:none;
+
+}
+.city_show .button_city_header {
+    height: 50px;
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+    box-shadow:none;
+}
+.city_show_two .button_city_header {
+    height: 50px;
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+    box-shadow:none;
+}
+.city_show_three .button_city_header {
+    height: 50px;
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+    box-shadow:none;
+}
+.city_show_four .button_city_header {
+    height: 50px;
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+    box-shadow:none;
+}
+.city_one_body {
+    width: 448px;
+    height: 214px;
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-top: 47px;
+}
+.city_two_body {
+    width: 448px;
+    height: 214px;
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-top: 47px;
+}
+.city_three_body {
+    width: 448px;
+    height: 214px;
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-top: 47px;
+}
+.city_four_body {
+    width: 448px;
+    height: 214px;
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-top: 47px;
+}
+.contact_item:not(.city_show) .city_one_body {
+    display: none;
+}
+.contact_item:not(.city_show_two) .city_two_body {
+    display: none;
+}
+.contact_item:not(.city_show_three) .city_three_body {
+    display: none;
+}
+.contact_item:not(.city_show_four) .city_four_body {
+    display: none;
+}
+.info_city_header {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin: 17px 93px 1px 35px;
+}
+.info_city_text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+.btn_call_us {
+    width: 122px;
+    height: 26px;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    align-items: center;
+    margin: 0 160px 32px;
+}
+.button_city_header:hover {
+    height: 50px;
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    border-radius: 0px;
+}
+
+.accordion-body-city {
+    display: block;
+    padding: 0 1.75rem 0.75rem 1.75rem;
+    overflow: hidden;
+    background: #DCE9D9;
+}
+.punkt:hover hr {
+    border: 1px solid #717171;
+}
+.punkt:hover .city_one {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+.punkt:hover .city_two {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+.punkt:hover .city_three {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+.punkt:hover .city_four {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+hr {
+    border: 1px solid #D9D9D9;
+}
+hr:hover {
+    border: 1px solid #717171;
+}
+.city_one {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #499A18;
+}
+.city_one:hover {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+.city_two {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #499A18;
+}
+.city_two:hover {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+.city_three {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #499A18;
+}
+.city_three:hover {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+}
+.city_four {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #499A18;
+}
+.city_four:hover {
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
 }
 .ellips-btn {
     width: 16px;

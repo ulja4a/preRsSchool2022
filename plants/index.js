@@ -117,14 +117,53 @@
 
 }());
 
-/*(function () {
-    document.querySelector(".price_item1").classList.add("accordion_item_show")
-    document.querySelectorAll(".price_item1").forEach((sec) =>{
-        sec.addEventListener("click", (event) => {
-            console.log(1)
-                document.querySelectorAll(".price_item1").forEach((el) => {
-                    el.classList.removed("accordion_item_show")
-                })
-        })
+//accordion-city
+(function () {
+    const CityItem = document.querySelector(".button_city_header");
+    const CityBody = document.querySelector(".contact_item");
+        CityItem.addEventListener("click", (event) => {
+            
+            CityBody.classList.toggle("contact_item_show");
+            CityBody.classList.remove("city_show")
+            CityBody.classList.remove("city_show_two")
+            CityBody.classList.remove("city_show_three")
+            CityBody.classList.remove("city_show_four")
     })
-})*/
+    
+    const CityP = document.querySelector(".city_one");
+        CityP.addEventListener("click", (event) => {
+            CityItem.innerHTML = 'Canandaigua, NY'
+            CityBody.classList.remove("contact_item_show")
+            CityBody.classList.toggle("city_show")
+            CityBody.classList.remove("city_show_two")
+            CityBody.classList.remove("city_show_three")
+            CityBody.classList.remove("city_show_four")
+        })
+    const CityPt = document.querySelector(".city_two");
+        CityPt.addEventListener("click", (event) => {
+            CityItem.innerHTML = 'New York City'
+            CityBody.classList.remove("contact_item_show")
+            CityBody.classList.remove("city_show")
+            CityBody.classList.toggle("city_show_two")
+            CityBody.classList.remove("city_show_three")
+            CityBody.classList.remove("city_show_four")
+        })
+        const CityPth = document.querySelector(".city_three");
+        CityPth.addEventListener("click", (event) => {
+            CityItem.innerHTML = 'Yonkers, NY'
+            CityBody.classList.remove("contact_item_show")
+            CityBody.classList.toggle("city_show_three")
+            CityBody.classList.remove("city_show_two")
+            CityBody.classList.remove("city_show")
+            CityBody.classList.remove("city_show_four")
+        })
+        const CityPf = document.querySelector(".city_four");
+        CityPf.addEventListener("click", (event) => {
+            CityItem.innerHTML = 'Sherrill, NY'
+            CityBody.classList.remove("contact_item_show")
+            CityBody.classList.toggle("city_show_four")
+            CityBody.classList.remove("city_show_two")
+            CityBody.classList.remove("city_show_three")
+            CityBody.classList.remove("city_show")
+        })
+}())
