@@ -2,8 +2,21 @@ const time = document.querySelector(".time");
     const currentDate = document.querySelector(".date")
     const greeting = document.querySelector(".greeting")
     const date = new Date();
-    body.style.backgroundImage = "url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/18.jpg')";
+    //body.style.backgroundImage = "url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/18.jpg')";
+    //console.log(Math.ceil(Math.random() * (max - min + 1)) + min);
+    const max=20;
+    const min=1;
+    let numRandom = Math.floor((Math.random()* (max - min + 1))+min);
+
+    function getRandomNum() {
+        let numRandom = Math.floor((Math.random()* (max - min + 1))+min);
+        return numRandom;
+        
+    }
+        getRandomNum();
+        console.log(getRandomNum())
     
+
     function getTimeOfDay(){
         const hours = date.getHours();    
         if (hours>0 && hours<6) {
