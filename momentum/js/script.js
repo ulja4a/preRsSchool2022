@@ -2,11 +2,9 @@ const time = document.querySelector(".time");
     const currentDate = document.querySelector(".date")
     const greeting = document.querySelector(".greeting")
     const date = new Date();
-    //body.style.backgroundImage = "url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/18.jpg')";
-    //console.log(Math.ceil(Math.random() * (max - min + 1)) + min);
     const max=20;
     const min=1;
-    let numRandom = Math.floor((Math.random()* (max - min + 1))+min);
+    let randomNum;
 
     function getRandomNum() {
         let numRandom = Math.floor((Math.random()* (max - min + 1))+min);
@@ -15,6 +13,9 @@ const time = document.querySelector(".time");
     }
         getRandomNum();
         console.log(getRandomNum())
+        let x=getRandomNum()
+        console.log(String(x))
+    console.log(String(x).padStart(2, '0'))
     
 
     function getTimeOfDay(){
@@ -66,9 +67,16 @@ function showTime() {
                 }
               }
               window.addEventListener('load', getLocalStorage)
-        }
+              
+            }
         showGreeting()     
         
 }
   showTime();
-  
+  function setBg() {
+    const timeOfDay = getTimeOfDay();
+    const bgNum = String(getRandomNum()).padStart(2, '0');
+    //const linkRandom = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
+    document.body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
+  }
+    setBg()
