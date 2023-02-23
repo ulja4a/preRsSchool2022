@@ -1,10 +1,12 @@
 const time = document.querySelector(".time");
     const currentDate = document.querySelector(".date")
     const greeting = document.querySelector(".greeting")
+    const slideNext = document.querySelector(".slide-next")
+    const slidePrev = document.querySelector(".slide-prev")
     const date = new Date();
     const max=20;
     const min=1;
-    let randomNum;
+    let randomNum = getRandomNum();
 
     function getRandomNum() {
         let numRandom = Math.floor((Math.random()* (max - min + 1))+min);
@@ -12,11 +14,26 @@ const time = document.querySelector(".time");
         
     }
         getRandomNum();
-        console.log(getRandomNum())
-        let x=getRandomNum()
-        console.log(String(x))
-    console.log(String(x).padStart(2, '0'))
     
+    function getSlideNext() {
+        if(randomNum>=20) {
+            randomNum = 1;
+        } else {
+        randomNum++;
+        }
+        setBg(); 
+    }   
+    slideNext.addEventListener('click', getSlideNext)
+
+    function getSliderPrev() {
+        if(randomNum=1) {
+            randomNum = 20;
+        } else {
+        randomNum--;
+        }
+        setBg();
+    }
+    slidePrev.addEventListener('click', getSliderPrev)
 
     function getTimeOfDay(){
         const hours = date.getHours();    
@@ -73,10 +90,19 @@ function showTime() {
         
 }
   showTime();
-  function setBg() {
+  /*function setBg() {
     const timeOfDay = getTimeOfDay();
     const bgNum = String(getRandomNum()).padStart(2, '0');
-    //const linkRandom = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
     document.body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
   }
-    setBg()
+    setBg()*/
+    function setBg() {
+        const timeOfDay = getTimeOfDay();
+        const bgNum = String(getRandomNum()).padStart(2, '0');
+        const img = new Image();
+        img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
+        img.onload = () => {      
+            document.body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
+        }; 
+      }
+      setBg();
