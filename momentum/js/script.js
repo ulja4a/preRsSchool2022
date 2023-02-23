@@ -1,9 +1,13 @@
 const time = document.querySelector(".time");
     const currentDate = document.querySelector(".date")
     const greeting = document.querySelector(".greeting")
+    const city = document.querySelector(".city");
     const slideNext = document.querySelector(".slide-next")
     const slidePrev = document.querySelector(".slide-prev")
     const date = new Date();
+    const weatherIcon = document.querySelector('.weather-icon');
+const temperature = document.querySelector('.temperature');
+const weatherDescription = document.querySelector('.weather-description');
     const max=20;
     const min=1;
     let randomNum = getRandomNum();
@@ -68,12 +72,13 @@ function showTime() {
         function showGreeting() {
             const timeOfDay = getTimeOfDay();
             const greetingText = `Good ${timeOfDay}`;
-            
+            const cityText = ``;
             greeting.textContent = greetingText
-
+            city.textContent = cityText
             function setLocalStorage() {
                 
                 localStorage.setItem('name', name.value);
+                localStorage.setItem('city', city.value);
               }
               window.addEventListener('beforeunload', setLocalStorage)
               
@@ -82,6 +87,13 @@ function showTime() {
                     
                   name.value = localStorage.getItem('name');
                 }
+                if(localStorage.getItem('city')) {
+                    
+                    city.value = localStorage.getItem('city');
+                  } else {
+                    city.value = Batumi
+                  }
+                  getWeather();
               }
               window.addEventListener('load', getLocalStorage)
               
@@ -90,12 +102,7 @@ function showTime() {
         
 }
   showTime();
-  /*function setBg() {
-    const timeOfDay = getTimeOfDay();
-    const bgNum = String(getRandomNum()).padStart(2, '0');
-    document.body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
-  }
-    setBg()*/
+  
     function setBg() {
         const timeOfDay = getTimeOfDay();
         const bgNum = String(getRandomNum()).padStart(2, '0');
@@ -106,3 +113,19 @@ function showTime() {
         }; 
       }
       setBg();
+
+      async function getWeather() {  
+        city.addEventListener('change', getWeather)
+        console.log(city.value);
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=d898315f5267cd1ec1cf5946f517c5ba&units=metric`;
+        const res = await fetch(url);
+        const data = await res.json();
+        //const city = new City();
+        weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+        temperature.textContent = `${data.main.temp}°C`;
+        weatherDescription.textContent = data.weather[0].description; 
+        
+        console.log(data.weather[0].id, data.weather[0].description, data.main.temp);
+        
+    }
+      getWeather()     
