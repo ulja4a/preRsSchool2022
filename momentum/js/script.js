@@ -149,5 +149,6 @@ function showTime() {
       }
       
       getQuotes();
+      window.addEventListener('load', getQuotes)
       changeQuote.addEventListener('click', getQuotes)
       
