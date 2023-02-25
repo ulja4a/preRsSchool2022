@@ -4,10 +4,13 @@ const time = document.querySelector(".time");
     const city = document.querySelector(".city");
     const slideNext = document.querySelector(".slide-next")
     const slidePrev = document.querySelector(".slide-prev")
+    const changeQuote = document.querySelector(".change-quote")
+    const quote = document.querySelector(".quote")
+    const author = document.querySelector(".author")
     const date = new Date();
     const weatherIcon = document.querySelector('.weather-icon');
-const temperature = document.querySelector('.temperature');
-const weatherDescription = document.querySelector('.weather-description');
+    const temperature = document.querySelector('.temperature');
+    const weatherDescription = document.querySelector('.weather-description');
     const max=20;
     const min=1;
     let randomNum = getRandomNum();
@@ -116,7 +119,7 @@ function showTime() {
 
       async function getWeather() {  
         city.addEventListener('change', getWeather)
-        console.log(city.value);
+        
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=d898315f5267cd1ec1cf5946f517c5ba&units=metric`;
         const res = await fetch(url);
         const data = await res.json();
@@ -128,4 +131,23 @@ function showTime() {
         console.log(data.weather[0].id, data.weather[0].description, data.main.temp);
         
     }
-      getWeather()     
+      getWeather()   
+      
+      async function getQuotes() {  
+        const quotes = 'http://127.0.0.1:5500/ulja4a-JSFEPRESCHOOL2022Q4/momentum/data.json';
+        const res = await fetch(quotes);
+        const data = await res.json(); 
+        console.log(data);
+        console.log(randomNum)
+        randomNum = +randomNum;
+
+    if (randomNum === 20) {
+        randomNum = 0;
+    }
+        quote.textContent = data[randomNum].text
+        author.textContent = data[randomNum].author
+      }
+      
+      getQuotes();
+      changeQuote.addEventListener('click', getQuotes)
+      
