@@ -1,4 +1,4 @@
-const time = document.querySelector(".time");
+    const time = document.querySelector(".time");
     const currentDate = document.querySelector(".date")
     const greeting = document.querySelector(".greeting")
     const city = document.querySelector(".city");
@@ -11,11 +11,35 @@ const time = document.querySelector(".time");
     const weatherIcon = document.querySelector('.weather-icon');
     const temperature = document.querySelector('.temperature');
     const weatherDescription = document.querySelector('.weather-description');
+    const playBtn = document.querySelector(".play")
+    const pauseBtn = document.querySelector(".pause")
     const max=20;
     const min=1;
     let randomNum = getRandomNum();
+    let isPlay = false;
+    const audio = new Audio();
+    
 
-    function getRandomNum() {
+    function playAudio() {
+        audio.src = "https://7oom.ru/audio/naturesounds/07%20Birds%20(7oom.ru).mp3";
+    audio.currentTime = 0;
+        if(!isPlay) {
+            isPlay = true;
+          playBtn.classList.toggle('pause')
+          audio.play()
+          
+        } else {
+          playBtn.classList.toggle('pause')
+          isPlay = true;
+          audio.pause();
+        }
+        
+      }
+      playBtn.addEventListener('click', playAudio);
+
+   
+
+function getRandomNum() {
         let numRandom = Math.floor((Math.random()* (max - min + 1))+min);
         return numRandom;
         
