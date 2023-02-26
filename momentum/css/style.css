@@ -284,4 +284,22 @@
       padding: 5px;
     }
   }
-  
+  .link-github {
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-items: center;
+
+  }
+  .link-rsschool {
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-items: center;
+  }
+  .link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
